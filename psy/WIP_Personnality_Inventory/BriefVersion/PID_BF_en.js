@@ -9,7 +9,7 @@ carefully, selecting the response that best describes you.
 
 let answers = [
     [1,"Very false or\n Often false"],
-    [2,"Sometimes or\n SomewhatFalse"],
+    [2,"Sometimes or\n Somewhat False"],
     [3,"Sometimes or Somewhat True"],
     [4,"Very True or Often True "]
 ]
@@ -47,29 +47,7 @@ let questions = {
 //form.pushOptions({compact: true})
 
 form.section("Questions", () => {
-    form.enum("q1", questions[1],answers)
-    form.enum("q2", questions[2],answers)
-    form.enum("q3", questions[3],answers)
-    form.enum("q4", questions[4],answers)
-    form.enum("q5", questions[5],answers)
-    form.enum("q6", questions[6],answers)
-    form.enum("q7", questions[7],answers)
-    form.enum("q8", questions[8],answers)
-    form.enum("q9", questions[9],answers)
-    form.enum("q10", questions[10],answers)
-    form.enum("q11", questions[11],answers)
-    form.enum("q12", questions[12],answers)
-    form.enum("q13", questions[13],answers)
-    form.enum("q14", questions[14],answers)
-    form.enum("q15", questions[15],answers)
-    form.enum("q16", questions[16],answers)
-    form.enum("q17", questions[17],answers)
-    form.enum("q18", questions[18],answers)
-    form.enum("q19", questions[19],answers)
-    form.enum("q20", questions[20],answers)
-    form.enum("q21", questions[21],answers)
-    form.enum("q22", questions[22],answers)
-    form.enum("q23", questions[23],answers)
-    form.enum("q24", questions[24],answers)
-    form.enum("q25", questions[25],answers)
+    for (quest in questions){
+    form.enum("1"+quest, questions[quest],answers)
+}
 })
